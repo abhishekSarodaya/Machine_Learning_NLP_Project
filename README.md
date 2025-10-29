@@ -85,3 +85,68 @@ This hybrid design ensures precision, interpretability, and efficiency — makin
 
 ### Deep Learning Pipeline
 
+
+---
+
+## 🚀 Steps to Run the Code
+
+### 💻 Option 1: Run on Google Colab
+1. Upload the `.ipynb` files to your Google Drive.
+2. Open each notebook:
+   - `Mini_Project_Machine_Learning.ipynb` → LPC dataset (BERT)
+   - `ml_mini_part_2.ipynb` → BBC dataset (BERT)
+   - `ml_mini_traditional.ipynb` → Classical ML (both datasets)
+3. Mount your Google Drive inside Colab:
+   ```python
+   from google.colab import drive
+   drive.mount('/content/drive')
+
+# 📊 Experiments and Results Summary
+
+| **Dataset** | **Model** | **Accuracy** | **F1-Score** | **Remarks** |
+|--------------|-----------|---------------|---------------|-------------|
+| **English LPC** | BERT-base-uncased | ~73 % | ~0.73 | Strong baseline for long-text classification |
+| **BBC Dataset** | BERT-base-uncased | ~94 % | ~0.93 | Excellent performance on clean short-text data |
+| **English LPC** | Logistic Regression | ~75 % | ~0.74 | Best traditional model for LPC |
+| **BBC Dataset** | Logistic Regression | ~95 % | ~0.94 | Matches deep learning accuracy with simpler model |
+| **Both Datasets** | Linear SVM | ~92–95 % | ~0.92 | Performs competitively with BERT |
+
+---
+
+### 🔍 Key Observations
+
+- 🧠 **BERT** models achieve strong contextual accuracy for **long and complex articles** (LPC dataset).  
+- ⚡ **Logistic Regression** and **Linear SVM** perform extremely well on **structured, shorter text** (BBC dataset).  
+- 🕒 **Classical ML models** train faster and require far fewer computational resources than transformer models.  
+- 🔄 For **production-grade systems**, a hybrid model that combines **TF-IDF features** with **BERT embeddings** could provide optimal efficiency and accuracy.
+
+---
+
+# 🧾 Conclusion
+
+This project successfully demonstrates **news article classification** using both **Transformer-based Deep Learning** and **Traditional Machine Learning** approaches.
+
+- **BERT** excels at capturing **semantic nuances** in long and context-rich text, making it ideal for complex news corpora such as LPC.  
+- **Logistic Regression** and **SVM**, despite their simplicity, perform nearly on par for structured datasets like BBC, proving the continued value of classical ML methods.  
+- The experiments validate that **classic ML techniques remain highly competitive** when combined with strong text preprocessing and TF-IDF vectorization.
+
+### 🚀 Future Work
+- Experiment with **Indic-BERT**, **DistilBERT**, and **multilingual datasets** for cross-language expansion.  
+- Deploy as a **Streamlit or Flask web app** for real-time user predictions.  
+- Extend to **multi-label classification** (e.g., articles belonging to multiple topics) and **fake news detection** for greater applicability.
+
+---
+
+# 📚 References
+
+- [L3Cube Pune IndicNLP Repository](https://github.com/l3cube-pune/indic-nlp/tree/main)  
+- [BBC News Dataset – Kaggle Source](https://www.kaggle.com/datasets/pariza/bbc-news-summary)  
+- [Scikit-learn Documentation](https://scikit-learn.org/stable/)  
+- [Hugging Face Transformers](https://huggingface.co/transformers/)  
+- [TF-IDF Text Representation — Stanford NLP Guide](https://nlp.stanford.edu/IR-book/html/htmledition/tf-idf-term-weighting-1.html)
+
+---
+
+> 🧩 *These experiments underline the power of combining modern transformer architectures with traditional NLP feature-based methods, creating a robust and efficient solution for automated news categorization.*
+
+
