@@ -37,26 +37,51 @@ Accurately classifying news articles helps improve **content recommendation syst
 
 ---
 
-## ⚙️ Methods
+# ⚙️ Methods
 
-### 🎯 *Problem Approach*
-The goal of this study is to predict the correct **news category** for a given article using two different paradigms:
-1. **Deep Learning (Transformer Models)**
-   - Fine-tuning `bert-base-uncased` on both datasets
-   - Tokenizing text sequences and applying classification heads
-2. **Traditional Machine Learning**
-   - TF-IDF feature extraction followed by classical ML classifiers  
-   - Algorithms: Logistic Regression, Linear SVM  
+## 🎯 Problem Approach
+
+The general goal of this project is to automatically classify **English news articles** into their correct categories using **Natural Language Processing (NLP)** and **Machine Learning (ML)** methods.  
+
+The experiments were performed on two datasets — **English LPC (Long Paragraph Classification)** and **BBC News** — to evaluate performance differences between **Deep Learning (BERT)** and **Traditional ML** approaches.
+
+To achieve that, the process was broken down into four main stages:
+
+| **Step** | **Description** |
+|-----------|-----------------|
+| **Data Preprocessing** | Cleaning and normalizing raw news text data to remove noise, HTML tags, punctuation, and irrelevant symbols. Label encoding was used for class mapping. |
+| **Feature Extraction (TF-IDF / Tokenization)** | For traditional ML, text was vectorized using *Term Frequency–Inverse Document Frequency (TF-IDF)* to convert text into numerical features. For deep learning, BERT tokenizer was applied to convert text into token IDs and attention masks. |
+| **Model Training** | Applied both deep learning and traditional ML algorithms — including BERT fine-tuning, Logistic Regression, and Linear SVM — to classify articles into their correct categories. |
+| **Evaluation and Comparison** | Evaluated all models using **Accuracy**, **Precision**, **Recall**, and **F1-Score** to determine the best performing approach for each dataset. |
+
+**Table 1:** Steps involved in News Classification using NLP and Machine Learning Approaches
 
 ---
 
-### 🧩 *Why This Approach Works*
-- **BERT (Bidirectional Encoder Representations from Transformers)** captures the deep semantic and contextual relationships between words, giving it a strong edge for long text understanding.  
-- **TF-IDF with Logistic Regression/SVM** serves as a lightweight, interpretable, and efficient baseline for comparison.  
-- By comparing both approaches, we can evaluate the trade-offs between computational complexity and predictive power.
+## 💡 Why This Approach Works
+
+- **BERT** captures rich contextual word meanings and long-term dependencies across entire paragraphs, which is ideal for long-form news (English LPC dataset).  
+- **TF-IDF** effectively measures word relevance across articles, ensuring frequent but uninformative words (like *“said”*, *“news”*) don’t dominate.  
+- **Classical ML models (Logistic Regression, Linear SVM)** are lightweight, easy to interpret, and perform exceptionally well on smaller, clean datasets like BBC News.  
+- **NLP preprocessing (cleaning, normalization, and tokenization)** ensures models learn meaningful text features rather than noise.
+
+This hybrid design ensures precision, interpretability, and efficiency — making it practical for real-world media classification or news analytics systems.
 
 ---
 
-### 🧭 *Methodology Flow Diagram*
+## 🧩 Alternative Approaches Considered
 
-#### Deep Learning (BERT)
+| **Approach** | **Description** | **Reason for Not Selecting** |
+|---------------|------------------|-------------------------------|
+| **Deep Neural Networks (LSTM, CNN)** | Can model long-term dependencies and sentence context. | Require large labeled datasets and GPUs for optimal performance. High training cost for minimal accuracy gain in this domain. |
+| **Word2Vec / GloVe Embeddings** | Capture semantic relationships between words. | TF-IDF and BERT already provide strong representations; additional embedding layers added little improvement. |
+| **Naïve Bayes / Random Forest** | Simpler traditional classifiers. | Performed lower in accuracy and F1 due to independence assumptions and sparse TF-IDF vectors. |
+
+**Table 2:** Comparison of Alternative Approaches and Reasons for Not Selecting Them
+
+---
+
+## 🧭 Methodology Flow Diagram
+
+### Deep Learning Pipeline
+
