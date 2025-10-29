@@ -105,11 +105,13 @@ This hybrid design ensures precision, interpretability, and efficiency — makin
 
 | **Dataset** | **Model** | **Accuracy** | **F1-Score** | **Remarks** |
 |--------------|-----------|---------------|---------------|-------------|
-| **English LPC** | BERT-base-uncased | ~73 % | ~0.73 | Strong baseline for long-text classification |
+| **English LPC** | BERT-base-uncased | ~74 % | ~0.73 | Strong baseline for long-text classification |
 | **BBC Dataset** | BERT-base-uncased | ~94 % | ~0.93 | Excellent performance on clean short-text data |
-| **English LPC** | Logistic Regression | ~75 % | ~0.74 | Best traditional model for LPC |
-| **BBC Dataset** | Logistic Regression | ~95 % | ~0.94 | Matches deep learning accuracy with simpler model |
-| **Both Datasets** | Linear SVM | ~92–95 % | ~0.92 | Performs competitively with BERT |
+| **English LPC** | Logistic Regression | ~73 % | ~0.72 | Best traditional model for LPC |
+| **BBC Dataset** | Logistic Regression | ~98 % | ~0.97 | Matches deep learning accuracy with simpler model |
+| **English LPC** | Linear SVM | ~72 % | ~0.72 | Performs slightly below BERT but remains stable for long-text data |
+| **BBC Dataset** | Linear SVM | ~98 % | ~0.95 | Outperforms other models; extremely high precision on structured short news articles |
+
 
 ---
 
