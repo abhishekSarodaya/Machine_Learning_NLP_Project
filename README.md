@@ -29,6 +29,7 @@ Accurately classifying news articles helps improve **content recommendation syst
 ### 🧾 *Dataset 2 – BBC News Dataset*
 **File Name:** `bbc_data.xlsx`  
 **Source:** [BBC articles fulltext and category](https://www.kaggle.com/datasets/yufengdev/bbc-fulltext-and-category)
+
 **Size:** ~2,200 records across 5 classes — Business, Entertainment, Politics, Sports, and Tech  
 **Preprocessing Performed:**
 - Text normalization and cleaning  
@@ -85,11 +86,11 @@ This hybrid design ensures precision, interpretability, and efficiency — makin
 
 ### BERT Model Workflow
 
-<img width="726" height="444" alt="Bert" src="https://github.com/user-attachments/assets/f35a24e8-1070-468c-8c20-fdc7755efc77" />
+<img width="726" height="444" alt="Bert" src="https://github.com/user-attachments/assets/d2fb886e-9e7c-4529-89cc-c4955df2938a" />
 
 ### Traditional Model Workflow
 
-<img width="672" height="444" alt="traditional" src="https://github.com/user-attachments/assets/dc40c0a2-20ce-4f62-bc21-81793ceedd6e" />
+<img width="672" height="377" alt="traditional_copy" src="https://github.com/user-attachments/assets/f7f27dcd-a7bf-4175-bbaf-d52cd5d62cff" />
 
 
 ---
