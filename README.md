@@ -13,7 +13,7 @@ Accurately classifying news articles helps improve **content recommendation syst
 
 ### 🧾 *Dataset 1 – English LPC (Long Paragraph Classification)*
 **File Name:** `English_train_lpc.xlsx`  
-**Source:** [L3Cube Pune IndicNLP GitHub Repository](https://github.com/l3cube-pune/indic-nlp/tree/main)  
+**Source:** [L3Cube Pune IndicNLP GitHub Repository](https://github.com/l3cube-pune/indic-nlp/tree/main/L3Cube-IndicNews/English/LPC)  
 **Language Used:** English  
 **Size:** ~36,877 training samples + validation/test splits  
 **Classes (12 total):** Auto, Business, Education, Elections, Entertainment, Health, India, Lifestyle, Science, Sports, Technology, World  
@@ -28,7 +28,7 @@ Accurately classifying news articles helps improve **content recommendation syst
 
 ### 🧾 *Dataset 2 – BBC News Dataset*
 **File Name:** `bbc_data.xlsx`  
-**Source:** Extracted from open-source BBC news text dataset  
+**Source:** [BBC articles fulltext and category](https://www.kaggle.com/datasets/yufengdev/bbc-fulltext-and-category)
 **Size:** ~2,200 records across 5 classes — Business, Entertainment, Politics, Sports, and Tech  
 **Preprocessing Performed:**
 - Text normalization and cleaning  
