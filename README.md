@@ -83,7 +83,13 @@ This hybrid design ensures precision, interpretability, and efficiency — makin
 
 ## 🧭 Methodology Flow Diagram
 
-### Deep Learning Pipeline
+### BERT Model Workflow
+
+<img width="726" height="444" alt="Bert" src="https://github.com/user-attachments/assets/f35a24e8-1070-468c-8c20-fdc7755efc77" />
+
+### Traditional Model Workflow
+
+<img width="672" height="444" alt="traditional" src="https://github.com/user-attachments/assets/dc40c0a2-20ce-4f62-bc21-81793ceedd6e" />
 
 
 ---
